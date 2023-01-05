@@ -8,7 +8,7 @@ import numpy as np
 api_key = "ZOFF8JEDW0TCPKSS"
 
 # Specify the symbols for the two stocks you want to compare
-symbol1 = "GOOGL"
+symbol1 ="GOOGL"
 symbol2 = "AAPL"
 
 # Send a GET request to the AlphaVantage API
