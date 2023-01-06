@@ -8,8 +8,8 @@ import numpy as np
 api_key = "ZOFF8JEDW0TCPKSS"
 
 # Specify the symbols for the two stocks you want to compare
-symbol1 ="GOOGL"
-symbol2 = "AAPL"
+symbol1 = input("Stock 1: ")
+symbol2 = input("Stock 2: ")
 
 # Send a GET request to the AlphaVantage API
 response = requests.get(f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol1}&apikey={api_key}")
@@ -45,5 +45,5 @@ plt.plot(close_prices1, y_pred, color='red')
 plt.title(f"{symbol1} vs. {symbol2} (R^2 = {r_squared:.2f})")
 plt.xlabel(symbol1)
 plt.ylabel(symbol2)
-plt.legend([symbol1, symbol2])
+#plt.legend([symbol1, symbol2])
 plt.show()
